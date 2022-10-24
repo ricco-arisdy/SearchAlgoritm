@@ -9,7 +9,7 @@ namespace SearchAlgorithm
     class Program
     {
         //Array yang akan dicari
-        int[] aar = new int[20];
+        int[] arr = new int[20];
         //Number of element in the array
         int n;
         //Get the number of element to store in the array
@@ -26,7 +26,15 @@ namespace SearchAlgorithm
                 break;
                 else
                     Console.WriteLine("\nArray should have minimum 1 and maximum 20 element.\n");
-                
+            }
+            //Accept array elemet
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("    Enter array element"      );
+            Console.WriteLine("-----------------------------");
+            for (i = 0; i < n; i++)
+            {
+
             }
         }
     }

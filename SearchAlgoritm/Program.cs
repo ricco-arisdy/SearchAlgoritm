@@ -24,14 +24,14 @@ namespace SearchAlgorithm
                 string s = Console.ReadLine();
                 n = Int32.Parse(s);
                 if ((n > 0) && (n <= 20))
-                break;
+                    break;
                 else
                     Console.WriteLine("\nArray should have minimum 1 and maximum 20 element.\n");
             }
             //Accept array elemet
             Console.WriteLine("");
             Console.WriteLine("-----------------------------");
-            Console.WriteLine("    Enter array element"      );
+            Console.WriteLine("    Enter array element");
             Console.WriteLine("-----------------------------");
             for (i = 0; i < n; i++)
             {
@@ -77,7 +77,7 @@ namespace SearchAlgorithm
                 ch = char.Parse(Console.ReadLine());
             } while ((ch == 'y') || (ch == 'Y'));
 
-            }
+        }
         public void LinearSearch()
         {
             char ch;
@@ -100,7 +100,7 @@ namespace SearchAlgorithm
                     }
                 }
                 if (i == n)
-                    Console.WriteLine("\n" item.ToString() + " not found in the array");
+                    Console.WriteLine("\n" + item.ToString() + " not found in the array");
                 Console.WriteLine("\nNumber of comparison: " + ctr);
                 Console.Write("\nCountinues search (y/n): ");
                 ch = char.Parse(Console.ReadLine());
@@ -108,9 +108,49 @@ namespace SearchAlgorithm
         }
         static void Main(string[] args)
         {
+            Program myList = new Program();
+            int pilihanmenu;
+            do
+            {
+                Console.WriteLine("Menu Option");
+                Console.WriteLine("======================");
+                Console.WriteLine("1.Linear Serch");
+                Console.WriteLine("2.Binary Serch");
+                Console.WriteLine("3.exit");
+                Console.Write("Enter your choice (1,2,3) : ");
+                pilihanmenu = Convert.ToInt32(Console.ReadLine());
 
-            }
-            
+                switch (pilihanmenu)
+                {
+                    case 1:
+                        Console.WriteLine("");
+                        Console.WriteLine("...................");
+                        Console.WriteLine("Linear Search");
+                        Console.WriteLine("...................");
+                        myList.input();
+                        myList.LinearSearch();
+                        break;
+                    case 2:
+                        Console.WriteLine("");
+                        Console.WriteLine("...................");
+                        Console.WriteLine("Binary Search");
+                        Console.WriteLine("...................");
+                        myList.input();
+                        myList.LinearSearch();
+                        break;
+                    case 3 :
+                        Console.WriteLine("Exit");
+                        break;
+                    default :
+                        Console.WriteLine("erorr");
+                        break;
+                }
+                //to exit from the console
+                Console.WriteLine("\n\n press retrun to exit");
+                Console.ReadLine();
+            } while (pilihanmenu != 0);
+
         }
     }
+
 }
